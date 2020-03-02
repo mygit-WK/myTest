@@ -6,10 +6,22 @@
     <meta name="viewport"
         content="width=device-width,height=device-height,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>表白</title>
+
     <style>
         * {
             padding: 0px;
             margin: 0px;
+        }
+        .container1{
+            position: relative;
+            width:100%;
+            height:100%;
+            overflow: hidden;
+        }
+        audio {
+            position: absolute;
+            left: 70%;
+            top: 54%;
         }
 
         .BigContainer {
@@ -25,6 +37,7 @@
             text-align: center;
             margin: 60px auto;
             font-weight: bold;
+            animation:myfirst 2s;
 
         }
 
@@ -46,7 +59,53 @@
         .container p {
             font-family: 华文行楷;
             font-size: 40px;
-            animation: myfirst 10s;
+            animation: myfirst 5s;
+        }
+
+        .p1 {
+            position: absolute;
+            background-color: #143c56;
+            border-radius: 10px;
+            box-shadow: black;
+            top: 80%;
+            left: 35%;
+            font-size: 20px;
+            text-align: center;
+            color: deeppink;
+            font-weight: bold;
+            font-family: 华文行楷;
+            border: 3px solid pink;
+            animation:myfirst 10s;
+        }
+
+        .allow {
+            position: absolute;
+            left: 55%;
+            top: 81%;
+            background-color: #143c56;
+            border-radius: 15px;
+            box-shadow: black;
+            font-size: 20px;
+            font-family: 华文行楷;
+            color: greenyellow;
+            cursor: pointer;
+            outline: none;
+            animation:myfirst 15s;
+        }
+
+        .quit {
+            position: absolute;
+            left: 65%;
+            top: 81%;
+            background-color: #143c56;
+            border-radius: 30px;
+            box-shadow: black;
+            font-size: 20px;
+            font-family: 华文行楷;
+            color: red;
+            cursor: pointer;
+            outline: none;
+            animation:myfirst 15s;
         }
 
         @keyframes myfirst {
@@ -58,27 +117,54 @@
                 opacity: 1;
             }
         }
-
-        audio {
-            position: absolute;
-            left: 70%;
-            top: 54%;
-        }
     </style>
 </head>
 
 <body>
-    <audio src="audio/love.mp3" autoplay="autoplay"></audio>
-    <img src="images/love2.jpg" width="100%" alt="picture">
-    <div class="BigContainer">
-        <div class="title"><span>送给最亲爱的你</span></div>
-        <div class="container">
-            <p>I have searched a thousand years,<span>(我寻觅了千万年，)</span></p>
-            <p>And I have cried a thousand tears.<span>(我哭泣了千万次。)</span></p>
-            <p>I found everything I need,<span>(我已经找到了需要的一切，)</span></p>
-            <p>You are everything to me.<span>(你就是我的一切。)</span></p>
+    <div class="container1">
+        <audio src="audio/love.mp3" autoplay="autoplay" loop="loop"></audio>
+        <img src="images/love2.jpg" width="100%" alt="picture">
+        <div class="BigContainer">
+            <div class="title"><span>送给最亲爱的你</span></div>
+            <div class="container">
+                <p>I have searched a thousand years,<span>(我寻觅了千万年，)</span></p>
+                <p>And I have cried a thousand tears.<span>(我哭泣了千万次。)</span></p>
+                <p>I found everything I need,<span>(我已经找到了需要的一切，)</span></p>
+                <p>You are everything to me.<span>(你就是我的一切。)</span></p>
+            </div>
         </div>
+        <p class="p1">你愿意<br />做我的女朋友么？</p>
+        <button class="allow" id="allow">我愿意</button>
+        <button class="quit" id="quit">我不愿意</button>
     </div>
 </body>
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+    var allow = $('allow');
+    var quit = $('quit');
+    allow.onclick = function () {
+        var b = confirm("你太明智了，为你点赞！");
+        if (b) {
+            alert("明天晚上八点，电影院不见不散！！");
+        } else {
+            alert("现在就打电话152XXXXXXX,约他出来吧！");
+        }
+    }
+    quit.onclick = function () {
+        var b = confirm("你真的不愿意吗?");
+        if (b) {
+            var c = confirm("你还是愿意的吧？");
+            if (c) {
+                alert("所以说不要口是心非了！和他在一起吧！");
+            } else {
+                alert("这不是你内心的真实想法，大胆的表达自己真实想法吧！");
+            }
+        } else {
+            alert("不要自己骗自己了，和他表白吧！");
+        }
+    }
+</script>
 
 </html>
