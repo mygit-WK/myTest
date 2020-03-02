@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>表白</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .BigContainer {
+            position: absolute;
+            top: 340px;
+            left: 25%;
+        }
+
+        .title {
+            width: 800px;
+            font-size: 55px;
+            font-family: 华文行楷;
+            text-align: center;
+            margin: 60px auto;
+            font-weight: bold;
+
+        }
+
+        .title span {
+            display: inline-block;
+            border: 3px solid #000000;
+            border-radius: 50%;
+            background-color: pink;
+            background-image: linear-gradient(to right, blue);
+        }
+
+        .container {
+            width: 900px;
+            margin: -50px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .container p {
+            font-family: 华文行楷;
+            font-size: 40px;
+            animation: myfirst 10s;
+        }
+
+        @keyframes myfirst {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        audio {
+            position: absolute;
+            left: 70%;
+            top: 54%;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="audio/love.mp3" autoplay="autoplay"></audio>
+    <img src="images/love2.jpg" width="100%" alt="picture">
+    <div class="BigContainer">
+        <div class="title"><span>送给最亲爱的你</span></div>
+        <div class="container">
+            <p>I have searched a thousand years,<span>(我寻觅了千万年，)</span></p>
+            <p>And I have cried a thousand tears.<span>(我哭泣了千万次。)</span></p>
+            <p>I found everything I need,<span>(我已经找到了需要的一切，)</span></p>
+            <p>You are everything to me.<span>(你就是我的一切。)</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
